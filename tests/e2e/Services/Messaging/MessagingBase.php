@@ -80,6 +80,13 @@ trait MessagingBase
                 'apiSecret' => 'my-apisecret',
                 'from' => '+123456789',
             ],
+            'alibabacloud' => [
+                'providerId' => ID::unique(),
+                'name' => 'AlibabaCloud1',
+                'accessKeyId' => 'my-accesskeyid',
+                'accessSecret' => 'my-accesssecret',
+                'from' => '+123456789',
+            ],
             'fcm' => [
                 'providerId' => ID::unique(),
                 'name' => 'FCM1',
@@ -169,6 +176,12 @@ trait MessagingBase
                 'name' => 'Vonage2',
                 'apiKey' => 'my-apikey',
                 'apiSecret' => 'my-apisecret',
+            ],
+            'alibabacloud' => [
+                'name' => 'AlibabaCloud2',
+                'accessKeyId' => 'my-accesskeyid',
+                'accessSecret' => '
+                my-accesssecret',
             ],
             'fcm' => [
                 'name' => 'FCM2',

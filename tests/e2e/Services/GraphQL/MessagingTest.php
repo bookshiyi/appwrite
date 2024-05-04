@@ -70,6 +70,13 @@ class MessagingTest extends Scope
                 'apiSecret' => 'my-apisecret',
                 'from' => '+123456789',
             ],
+            'AlibabaCloud' => [
+                'providerId' => ID::unique(),
+                'name' => 'AlibabaCloud1',
+                'accessKeyId' => 'my-accesskeyid',
+                'accessSecret' => 'my-accesssecret',
+                'from' => '+123456789',
+            ],
             'Fcm' => [
                 'providerId' => ID::unique(),
                 'name' => 'FCM1',
@@ -159,6 +166,13 @@ class MessagingTest extends Scope
                 'apiKey' => 'my-apikey',
                 'apiSecret' => 'my-apisecret',
             ],
+            'AlibabaCloud' => [
+                'providerId' => $providers[7]['_id'],
+                'name' => 'AlibabaCloud2',
+                'accessKeyId' => 'my-accesskeyid',
+                'accessSecret' => 'my-accesssecret',
+            ],
+            
             'Fcm' => [
                 'providerId' => $providers[7]['_id'],
                 'name' => 'FCM2',

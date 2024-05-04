@@ -22,6 +22,7 @@ use Utopia\Messaging\Adapter\Push\APNS;
 use Utopia\Messaging\Adapter\Push as PushAdapter;
 use Utopia\Messaging\Adapter\Push\FCM;
 use Utopia\Messaging\Adapter\SMS as SMSAdapter;
+use Utopia\Messaging\Adapter\SMS\AlibabaCloud;
 use Utopia\Messaging\Adapter\SMS\Mock;
 use Utopia\Messaging\Adapter\SMS\Msg91;
 use Utopia\Messaging\Adapter\SMS\Telesign;
@@ -415,6 +416,10 @@ class Messaging extends Action
                     'apiKey' => $user,
                     'apiSecret' => $password
                 ],
+                'alibabacloud' => [
+                    'accessKeyId' => $user,
+                    'accessSecret' => $password,
+                ],
                 default => null
             },
             'options' => [
@@ -460,6 +465,7 @@ class Messaging extends Action
             'telesign' => new Telesign($credentials['customerId'], $credentials['apiKey']),
             'msg91' => new Msg91($credentials['senderId'], $credentials['authKey'], $credentials['templateId']),
             'vonage' => new Vonage($credentials['apiKey'], $credentials['apiSecret']),
+            'alibabacloud' => new AlibabaCloud($credentials['accessKeyId'], $credentials['accessSecret'], $credentials['signName'], $credentials['templateCode']),
             default => null
         };
     }
