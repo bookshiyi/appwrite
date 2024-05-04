@@ -1757,7 +1757,7 @@ App::get('/v1/storage/:bucketId/usage')
     ->label('sdk.method', 'getBucketUsage')
     ->label('sdk.response.code', Response::STATUS_CODE_OK)
     ->label('sdk.response.type', Response::CONTENT_TYPE_JSON)
-    ->label('sdk.response.model', Response::MODEL_USAGE_BUCKETS)
+    ->label('sdk.response.model', Response::MODEL_USAGE_BUCKET)
     ->param('bucketId', '', new UID(), 'Bucket ID.')
     ->param('range', '30d', new WhiteList(['24h', '30d', '90d'], true), 'Date range.', true)
     ->inject('response')
@@ -1830,5 +1830,5 @@ App::get('/v1/storage/:bucketId/usage')
             'filesStorageTotal' => $usage[$metrics[1]]['total'],
             'files' => $usage[$metrics[0]]['data'],
             'storage' => $usage[$metrics[1]]['data'],
-        ]), Response::MODEL_USAGE_BUCKETS);
+        ]), Response::MODEL_USAGE_BUCKET);
     });

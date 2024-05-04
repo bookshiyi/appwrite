@@ -89,7 +89,7 @@ use Appwrite\Utopia\Response\Model\TemplateEmail;
 use Appwrite\Utopia\Response\Model\TemplateSMS;
 use Appwrite\Utopia\Response\Model\Token;
 use Appwrite\Utopia\Response\Model\Topic;
-use Appwrite\Utopia\Response\Model\UsageBuckets;
+use Appwrite\Utopia\Response\Model\UsageBucket;
 use Appwrite\Utopia\Response\Model\UsageCollection;
 use Appwrite\Utopia\Response\Model\UsageDatabase;
 use Appwrite\Utopia\Response\Model\UsageDatabases;
@@ -128,7 +128,7 @@ class Response extends SwooleResponse
     public const MODEL_USAGE_DATABASE = 'usageDatabase';
     public const MODEL_USAGE_COLLECTION = 'usageCollection';
     public const MODEL_USAGE_USERS = 'usageUsers';
-    public const MODEL_USAGE_BUCKETS = 'usageBuckets';
+    public const MODEL_USAGE_BUCKET = 'usageBucket';
     public const MODEL_USAGE_STORAGE = 'usageStorage';
     public const MODEL_USAGE_FUNCTIONS = 'usageFunctions';
     public const MODEL_USAGE_FUNCTION = 'usageFunction';
@@ -435,7 +435,7 @@ class Response extends SwooleResponse
             ->setModel(new UsageCollection())
             ->setModel(new UsageUsers())
             ->setModel(new UsageStorage())
-            ->setModel(new UsageBuckets())
+            ->setModel(new UsageBucket())
             ->setModel(new UsageFunctions())
             ->setModel(new UsageFunction())
             ->setModel(new UsageProject())

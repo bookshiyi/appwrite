@@ -5,7 +5,7 @@ namespace Appwrite\Utopia\Response\Model;
 use Appwrite\Utopia\Response;
 use Appwrite\Utopia\Response\Model;
 
-class UsageBuckets extends Model
+class UsageBucket extends Model
 {
     public function __construct()
     {
@@ -52,7 +52,7 @@ class UsageBuckets extends Model
      */
     public function getName(): string
     {
-        return 'UsageBuckets';
+        return 'UsageBucket';
     }
 
     /**
@@ -62,6 +62,6 @@ class UsageBuckets extends Model
      */
     public function getType(): string
     {
-        return Response::MODEL_USAGE_BUCKETS;
+        return Response::MODEL_USAGE_BUCKET;
     }
 }
